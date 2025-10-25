@@ -12,7 +12,7 @@ class Calculadora:
         if b != 0:
             return a / b
         else:
-            return "Error: División por cero no permitida."
+            return "Error: División por cero"
 
 
 calc = Calculadora()
@@ -41,3 +41,13 @@ def main():
             print(f"{num1} / {num2} = {calc.dividir(num1, num2)}")
     else:
         print("Opción inválida.")
+
+
+main()
+# Mini proyecto: Calculadora simple
+# Autor: ChecheNiky-cpu
+# Fecha: 2024-06-20
+# Descripción: Una calculadora que puede realizar operaciones básicas como suma, resta, multiplicación y división.
+# Uso: Ejecutar el script y seguir las instrucciones en pantalla.
+# Licencia: MIT License
+# Versión: 1.0
