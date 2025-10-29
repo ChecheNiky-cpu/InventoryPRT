@@ -1,0 +1,21 @@
+inventario_backend/
+│
+├── venv/                   # Entorno virtual de Python (no versionar)
+│
+├── app/                    # Directorio principal de la aplicación FastAPI
+│   ├── __init__.py         # Hace que 'app' sea un paquete Python
+│   ├── main.py             # Punto de entrada: crea la instancia FastAPI, monta routers, middleware (CORS)
+│   ├── database.py         # Configuración de SQLAlchemy (engine, SessionLocal, Base)
+│   ├── models.py           # Modelos de SQLAlchemy (Producto, Usuario)
+│   ├── schemas.py          # Esquemas Pydantic (ProductoCreate, ProductoInDB, UsuarioCreate, etc.)
+│   ├── crud.py             # Funciones CRUD para interactuar con la base de datos y lógica de autenticación (hashing, JWT)
+│   │
+│   └── routers/            # (Opcional pero recomendado) Carpeta para los endpoints API
+│       ├── __init__.py
+│       ├── auth.py         # Endpoints de autenticación (/token, /users/me)
+│       ├── productos.py    # Endpoints CRUD para productos (/productos/)
+│       └── usuarios.py     # Endpoints para creación/gestión de usuarios (/users/)
+│
+├── .env                    # Archivo para variables de entorno (DATABASE_URL, SECRET_KEY) - ¡No versionar!
+├── .gitignore              # Archivo para ignorar archivos/carpetas en Git (venv, .env, __pycache__, *.db)
+└── requirements.txt        # Lista de dependencias de Python (FastAPI, Uvicorn, SQLAlchemy, etc.)

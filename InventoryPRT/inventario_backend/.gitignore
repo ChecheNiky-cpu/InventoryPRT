@@ -1,0 +1,35 @@
+# inventario_backend/.gitignore
+
+# Entorno virtual
+venv/
+*.venv/
+env/
+venv.*
+ENV/
+
+# Bases de datos SQLite
+*.db
+*.db-journal
+
+# Archivos de Python compilados y caché
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración sensibles
+.env
+*.env
+
+# Archivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencias (si se instalan localmente, aunque es mejor usar venv)
+# node_modules/
+
+# Archivos de build/distribución
+dist/
+build/
+*.egg-info/

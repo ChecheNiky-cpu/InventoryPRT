@@ -1,0 +1,50 @@
+InventarioAppNativa/
+│
+├── assets/                 # Archivos estáticos (imágenes, fuentes)
+│   ├── images/
+│   └── fonts/
+│
+├── src/                    # (o app/ si usas Expo Router) Código fuente principal
+│   ├── screens/            # Componentes que representan pantallas completas
+│   │   ├── LoginScreen.tsx
+│   │   ├── InventoryDashboardScreen.tsx
+│   │   ├── ProductDetailScreen.tsx
+│   │   └── AddEditProductScreen.tsx
+│   │
+│   ├── components/         # Componentes reutilizables de UI
+│   │   ├── InventoryListItem.tsx
+│   │   ├── CustomButton.tsx
+│   │   ├── LoadingIndicator.tsx
+│   │   └── AuthTextInput.tsx
+│   │
+│   ├── navigation/         # Configuración de React Navigation
+│   │   ├── AppNavigator.tsx # Define los Stacks, Tabs, etc.
+│   │   └── AuthNavigator.tsx  # Navegador para flujo de autenticación
+│   │
+│   ├── services/           # (o api/) Lógica para interactuar con el backend
+│   │   ├── apiConfig.ts    # Configuración base de la API (URL, etc.)
+│   │   ├── authService.ts  # Funciones para login, registro
+│   │   └── productService.ts # Funciones CRUD para productos
+│   │
+│   ├── hooks/              # Hooks personalizados
+│   │   └── useAuth.ts      # Hook para manejar estado de autenticación
+│   │
+│   ├── contexts/           # (Opcional) Context API para estado global
+│   │   └── AuthContext.tsx # Contexto para la información del usuario logueado
+│   │
+│   ├── utils/              # Funciones de utilidad general
+│   │   ├── authStorage.ts  # Para guardar/leer token (AsyncStorage/SecureStore)
+│   │   └── helpers.ts
+│   │
+│   └── styles/             # (Opcional) Estilos globales, tema
+│       └── theme.ts
+│
+├── App.tsx                 # Componente raíz, usualmente configura el provider de navegación/contexto
+├── app.json                # (o app.config.js) Configuración de la app (nombre, icono, package, etc.)
+├── babel.config.js         # Configuración de Babel
+├── package.json            # Dependencias y scripts del proyecto
+├── tsconfig.json           # Configuración de TypeScript
+├── .gitignore              # Archivo para ignorar archivos/carpetas en Git (node_modules, .expo, builds)
+│
+├── android/                # (Si usas React Native CLI) Carpeta del proyecto nativo Android
+└── ios/                    # (Si usas React Native CLI) Carpeta del proyecto nativo iOS
